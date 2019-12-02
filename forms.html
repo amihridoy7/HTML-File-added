@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Text Input</h2>
+
+    <form>
+        First name:<br>
+        <input type="text" name="first-name">
+        <br>
+        Last name:<br>
+        <input type="text" name="last-name">
+    </form>
+
+    <p>Note that the form itself is not visible.</p>
+
+    <p>Also note that the default width of a text input field is 20 characters.</p>
+
+    <hr>
+    <h2>Radio Buttons</h2>
+
+    <form>
+        <input type="radio" name="gender" value="male">Male<br>
+        <input type="radio" name="gender" value="female" checked>Female<br>
+        <input type="radio" name="gender" value="other">Other
+    </form>
+    <hr>
+
+    <h2>HTML Submit</h2>
+
+    <form action="/action_page.php">
+        First name:<br>
+        <input type="text" name="first-name" value="Mickey">
+        <br>
+        Last name:<br>
+        <input type="text" name="last-name" value="Mouse">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+    <hr>
+
+    <h2>The target Attribute</h2>
+    <p>When submitting this forms, the result will be opened in a new browser tab:</p>
+
+    <from action="/action_page.php" target="_blank">
+        First name:<br>
+        <input type="text" name="first-name" value="Mickey">
+        <br>
+        Last name:<br>
+        <input type="text" name="last-name" value="Mouse">
+        <br><br>
+        <input type="submit" value="Submit"> 
+    </from>
+    <hr>
+
+    <h2>The method Attribute</h2>
+    <p>This form will be submitted using The GET method:</p>
+
+    <form action="/action_page.php" target="_blank" method="GET">
+        first-name:<br>
+        <input type="text" name="first-name" value="Mickey">
+        <br>
+        Last name:<br>
+        <input type="text" name="last-name" value="Mouse">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>After you submit, notice that the form values is visible in the address bar of the new browser tab.</p>
+
+    <hr>
+
+    <h2>The method Attribute</h2>
+    <p>This form will be submitted using the GET method:</p>
+
+    <form action="/action_page.php" target="_blank" method="GET">
+        First name:<br>
+        <input type="text" name="first-name" value="Mickey">
+        <br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>After you submit, notice that the form values is visible in the address bar ot the new browser tab.</p>
+
+    <h2>The Method Attribute</h2>
+    <p>This form will be submitted using the POST method:</p>
+
+    <form action="/action_page.php" target="_blank" method="POST">
+        First-name:<br>
+        <input type="text" name="first-name" value="Mickey">
+        <br>
+        Last name:<br>
+        <input type="text" name="last-name" value="Mouse">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>After you submit, notice that, unlike the GET method, the form values is NOT visible in the address bar of the new browser tab.</p>
+    <hr>
+
+    <h2>The name Attribute</h2>
+
+    <form action="/action_page.php">
+        First name:<br>
+        <input type="text" value="Mickey">
+        <br>
+        Last name:<br>
+        <input type="text" name="last-name" value="Mouse">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+    <p>Notice that the value of the "First-name" field will not be submitted, because the input element does not have a name attribute.</p>
+    <hr>
+
+    <h2>Grouping Form Data with Fieldset</h2>
+
+    <p>The fieldset element is used to group related data in a form, and the legend element defines a caption for the fieldset element.</p>
+    
+
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Personal information:</legend>
+            First-name:<br>
+            <input type="text" name="first-name" value="Mickey">
+            <br>
+            Last name:<br>
+            <input type="text" name="last-name" value="Mouse">
+            <br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>

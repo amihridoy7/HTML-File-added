@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is an example of a meta description. This will wften">
+    <meta name=viewport content="width=device-width, initial-scale=1"> 
+    <title></title>
+</head>
+<body>
+    
+    <script>
+        let getBody = document.body;
+        
+        let newElement = document.createElement("h1");
+        
+        let date = new Date();
+        let currentHour = date.getHours();
+        
+        let createTxtMsg;
+        
+        if (currentHour >=4 && currentHour < 10) {
+            createTxtMsg = "Good morning!";
+            } else if (currentHour >=10 && currentHour < 12){
+                createTxtMsg = "Good day!";
+            }else if (currentHour >=12 && currentHour < 18){
+                createTxtMsg = "Goody afternoon!";
+            }else if (currentHour >=18 && currentHour < 22){
+                createTxtMsg = "Goody evening!";
+            }else if (currentHour >=22 && currentHour < 4){
+                createTxtMsg = "Goody night!";
+            } else {
+                createTxtMsg = "Are you from a different planet! :0";
+            }
+        let createEleTxt = document.createTextNode(createTxtMsg);
+        
+        newElement.appendChild(createEleTxt);
+        
+        
+        getBody.appendChild(newElement);
+    </script>
+</body>
+</html>

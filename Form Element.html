@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>The input Element</h2>
+
+    <form action="/action_page.php">
+        Enter your name:
+        <input name="firstname" type="text">
+        <br><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <h2>The select Element</h2>
+    <p>The select element defines a drop-down list:</p>
+
+    <form action="/action_page.php">
+        <select name="cars">
+            <option value="volvo">volvo</option>
+            <option value="saab" selected>Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="Audi">Audi</option>
+        </select>
+        <br><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <h2>Pre-selected Option</h2>
+    <p>You can Pre-selected an option with the selected attribute.</p>    
+
+    <form action="/action_page.php">
+        <select name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat" selected>Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br><br>
+        <input type="submit">
+    </form>
+    <hr>
+
+    <h2>Visible Option Values</h2>
+    <p>Use the size attribute to specify the number of visible values.</p>
+
+    <form action="/action_page.php">
+        <select name="cars" size="4">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br><br>
+        <input type="submit">
+    </form>
+    <hr>
+
+    <h2>Allow Multiple Seletcions </h2>
+    <p>Use the multiple attribute to allow the user to select more than one value</p>
+
+    <form action="/action_page.php">
+        <select name="cars" size="4" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br><br>
+        <input type="submit">
+    </form>
+
+    <p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+    <hr>
+
+    <h2>Textarea</h2>
+    <p>The textarea element defines a multi-line input field.</p>
+
+    <form action="/action_page.php">
+        <textarea name="message" rows="10" cols="30">The cat was playing in the  garden.</textarea>
+        <br>
+        <input type="submit">
+    </form>
+    <hr>
+    <h2>Styling Textarea</h2>
+    <p>Use CSS to change the size of the textarea:</p>
+
+    <form action="/action_page.php">
+        <textarea name="message" style="width: 200px; height: 600px;">The cat was playing in the garden.</textarea>
+        <br>
+        <input type="submit">
+    </form>
+
+    <h2>The button Element</h2>
+
+    <button type="button" onclick="alert('Hello World')">Click Me!</button>
+    <hr>
+
+    <h2>the datalist Element</h2>
+    <p>The datalist element specifies a list of pre defined options for an input element.</p>
+
+    <form action="/action_page.php">
+        <input list="browsers" name="browser">
+        <datalist list="browsers" name="browser">
+            <option id="browsers">
+                <option value="Internet Explorer"></option>
+                <option value="Firefox"></option>
+                <option value="Chrome"></option>
+                <option value="Opera"></option>
+                <option value="Safari"></option>
+            </option>
+        </datalist>
+    </form>
+
+    <p><b>Not:</b> The datalist tag is not supported in safari or IE9 (and earlier)</p>
+    <hr>
+
+    <h2>The Output Element</h2>
+    <p>The output element represents the result of a calculation.</p>
+
+    <form action="/action_page.php" oninput="x.value=parseInt(a.value)+parselInt(b.value)">
+        0
+        <input type="range" id="a" name="a" value="50">
+        100+
+        <input type="number" id="b" name="b" value="50">
+        =
+        <output name="x" for="a b"></output>
+        <br><br>
+        <input type="submit">
+    </form>
+
+    <p><strong>Note:</strong> The output element is not supported in Edge 12 or Internet Explorer and earlier versions.</p>
+</body>
+</html>
